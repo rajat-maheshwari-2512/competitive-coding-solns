@@ -1,12 +1,15 @@
 #include <bits/stdc++.h>
 using namespace std;
-int main() 
+#define lli long long
+lli main() 
 {
-	int t;
+	ios_base::sync_with_stdio(false);
+    	cin.tie(NULL);
+	lli t;
 	cin>>t;
-	for(int i=0;i<t;i++)
+	for(lli i=0;i<t;i++)
 	{
-	    int s,w1,w2,w3;
+	    lli s,w1,w2,w3;
 	    cin>>s>>w1>>w2>>w3;
 	    if(s>=w1+w2+w3)
 	    {
