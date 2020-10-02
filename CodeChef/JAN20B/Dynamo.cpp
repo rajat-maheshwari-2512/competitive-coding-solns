@@ -3,6 +3,8 @@ using namespace std;
 #define lli unsigned long long
 int main() 
 {
+	ios_base::sync_with_stdio(false);
+    	cin.tie(NULL);
 	lli a,b,d,flag,t,n,s;
 	cin>>t;
 	for(lli i=0;i<t;i++)
