@@ -1,16 +1,19 @@
 #include <bits/stdc++.h>
 using namespace std;
+#define lli long long
 int main() 
 {
-    int t;
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    lli t;
     cin>>t;
     while(t--)
     {
-        int n,k,c=0;
+        lli n,k,c=0;
         char ch;
         cin>>n>>k;
-        int a[n];
-        for(int i=0;i<n;i++)
+        lli a[n];
+        for(lli i=0;i<n;i++)
         {
             cin>>ch;
             if(ch=='H')
@@ -22,7 +25,7 @@ int main()
                 a[i]=0;
             }
         }
-        for(int i=n-1;i>=n-k;i--)
+        for(lli i=n-1;i>=n-k;i--)
         {
             if(a[i]==1)
             {
@@ -32,14 +35,14 @@ int main()
                 }
             }
         }
-        for(int i=0;i<n-k;i++)
+        for(lli i=0;i<n-k;i++)
         {
             if(a[i]==1)
             {
                 c++;
             }
         }
-        cout<<c<<endl;
+        cout<<c<<"\n";
     }
-	return 0;
+    return 0;
 }
