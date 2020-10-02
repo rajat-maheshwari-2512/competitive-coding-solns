@@ -1,27 +1,29 @@
 #include <bits/stdc++.h>
 using namespace std;
+#define lli long long
 int main() 
 {
-    int t;
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    lli t;
     cin>>t;
     while(t--)
     {
-        long long n,k,max=0,c=0,flag=0;
+        lli n,k,max=0,c=0,flag=0;
         cin>>n>>k;
-        int a[n];
-        for(long long i=0;i<n;i++)
+        lli a[n];
+        for(lli i=0;i<n;i++)
         {
             cin>>a[i];
         }
-        for(long long i=0;i<n;i++)
+        for(lli i=0;i<n;i++)
         {
             flag=0;
-            for(long long j=i;j<n;j++)
+            for(lli j=i;j<n;j++)
             {
                 if(a[i]==a[j])
                 {
                     c++;
-                    //cout<<i<<" "<<j<<endl;
                 }
                 else
                 {
@@ -52,7 +54,7 @@ int main()
                 break;
             }
         }
-        cout<<max<<endl;
+        cout<<max<<"\n";
     }
-	return 0;
+    return 0;
 }
