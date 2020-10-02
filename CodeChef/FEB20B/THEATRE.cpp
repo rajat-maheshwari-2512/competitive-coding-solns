@@ -1,16 +1,20 @@
+//Was only able to do this partially not completely
 #include <bits/stdc++.h>
 using namespace std;
+#define lli long long
 int main() 
 {
-    long long t,sumt=0;
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    lli t,sumt=0;
     cin>>t;
-    for(long long i=0;i<t;i++)
+    for(lli i=0;i<t;i++)
     {
-        long long n,x,sum=0;
+        lli n,x,sum=0;
         char ch;
         cin>>n;
-        long long freq[4][4]={0};
-        for(long long j=0;j<n;j++)
+        lli freq[4][4]={0};
+        for(lli j=0;j<n;j++)
         {
             cin>>ch>>x;
             if(x==12)
@@ -86,10 +90,9 @@ int main()
                 }
             }
         }
-        //cout<<freq[1][0];
-        long long max[4]={0};
-        long long pos;
-        for(long long j=0;j<4;j++)
+        lli max[4]={0};
+        lli pos;
+        for(lli j=0;j<4;j++)
         {
             if(freq[j][0]>=max[0])
             {
@@ -97,12 +100,11 @@ int main()
                 pos=j;
             }
         }
-        //cout<<max[0];
-        for(long long j=0;j<4;j++)
+        for(lli j=0;j<4;j++)
         {
             if(freq[pos][j]>max[0])
             {
-                long long t=max[0];
+                lli t=max[0];
                 max[0]=freq[pos][j];
                 freq[pos][j]=t;
             }
@@ -111,7 +113,7 @@ int main()
         freq[pos][1]=0;
         freq[pos][2]=0;
         freq[pos][3]=0;
-        for(long long j=0;j<4;j++)
+        for(lli j=0;j<4;j++)
         {
             if(freq[j][1]>=max[1])
             {
@@ -119,11 +121,11 @@ int main()
                 pos=j;
             }
         }
-        for(long long j=0;j<4;j++)
+        for(lli j=0;j<4;j++)
         {
             if(freq[pos][j]>max[1])
             {
-                long long t=max[1];
+                lli t=max[1];
                 max[1]=freq[pos][j];
                 freq[pos][j]=t;
             }
@@ -132,7 +134,7 @@ int main()
         freq[pos][1]=0;
         freq[pos][2]=0;
         freq[pos][3]=0;
-        for(long long j=0;j<4;j++)
+        for(lli j=0;j<4;j++)
         {
             if(freq[j][2]>=max[2])
             {
@@ -140,11 +142,11 @@ int main()
                 pos=j;
             }
         }
-        for(long long j=0;j<4;j++)
+        for(lli j=0;j<4;j++)
         {
             if(freq[pos][j]>max[2])
             {
-                long long t=max[2];
+                lli t=max[2];
                 max[2]=freq[pos][j];
                 freq[pos][j]=t;
             }
@@ -153,7 +155,7 @@ int main()
         freq[pos][1]=0;
         freq[pos][2]=0;
         freq[pos][3]=0;
-        for(long long j=0;j<4;j++)
+        for(lli j=0;j<4;j++)
         {
             if(freq[j][3]>=max[3])
             {
@@ -161,11 +163,11 @@ int main()
                 pos=j;
             }
         }
-        for(long long j=0;j<4;j++)
+        for(lli j=0;j<4;j++)
         {
             if(freq[pos][j]>max[3])
             {
-                long long t=max[3];
+                lli t=max[3];
                 max[3]=freq[pos][j];
                 freq[pos][j]=t;
             }
@@ -175,7 +177,6 @@ int main()
         freq[pos][2]=0;
         freq[pos][3]=0;
         sort(max,max+4);
-        //cout<<max[0]<<max[1]<<max[2]<<max[3];
         if(max[0]!=0)
         {
             sum+=25*max[0];
@@ -208,7 +209,7 @@ int main()
         {
             sum-=100;
         }
-        cout<<sum<<endl;
+        cout<<sum<<"\n";
         sumt+=sum;
     }
     cout<<sumt;
