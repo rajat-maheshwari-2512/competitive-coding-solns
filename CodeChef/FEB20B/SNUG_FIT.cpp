@@ -1,27 +1,30 @@
 #include <bits/stdc++.h>
 using namespace std;
+#define lli long long
 int main() 
 {
-    int t;
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    lli t;
     cin>>t;
-    for(int i=0;i<t;i++)
+    for(lli i=0;i<t;i++)
     {
-        long long n;
+        lli n;
         cin>>n;
-        priority_queue<long long> a;
-        priority_queue<long long> b;
-        long long sum=0,x;
-        for(long long j=0;j<n;j++)
+        priority_queue<lli> a;
+        priority_queue<lli> b;
+        lli sum=0,x;
+        for(lli j=0;j<n;j++)
         {
             cin>>x;
             a.push(x);
         }
-        for(long long j=0;j<n;j++)
+        for(lli j=0;j<n;j++)
         {
             cin>>x;
             b.push(x);
         }
-        for(int j=0;j<n;j++)
+        for(lli j=0;j<n;j++)
         {
             if(a.top()>=b.top())
             {
@@ -36,7 +39,7 @@ int main()
                 b.pop();
             }
         }
-        cout<<sum<<endl;
+        cout<<sum<<"\n";
     }
 	return 0;
 }
