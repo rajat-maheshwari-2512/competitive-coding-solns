@@ -3,21 +3,23 @@ using namespace std;
 #define lli long long
 int main() 
 {
+	ios_base::sync_with_stdio(false);
+    	cin.tie(NULL);
 	lli t;
 	cin>>t;
 	for(lli i=0;i<t;i++)
-    {
-        lli n,min=100000,num;
-        cin>>n;
-        for(lli j=0;j<n;j++)
-        {
-            cin>>num;
-            if(num<min)
-            {
-                min=num;
-            }
-        }
-        cout<<min<<"\n";
-    }
+    	{
+        	lli n,min=100000,num;
+        	cin>>n;
+        	for(lli j=0;j<n;j++)
+        	{
+            		cin>>num;
+            		if(num<min)
+            		{
+                		min=num;
+            		}
+        	}
+        	cout<<min<<"\n";
+    	}
 	return 0;
 }
